@@ -7,10 +7,11 @@ class Perceptron:
         self.line = self.w*x + self.b # Equação da Reta
 
     def print_stats(self):
-        print(f"Peso (w) = {self.w:.2f}")
-        print(f"Bias (b) = {self.b:.2f}")
-        print(f"Eq. Reta (y = w*x + b) = {self.line:.2f}")
+        print(f"Peso (w) = {self.w:.3f}")
+        print(f"Bias (b) = {self.b:.3f}")
+        print(f"Eq. Reta (y = w*x + b) = {self.line:.3f}")
 
-# Inicializando perceptron com exemplo  
-p = Perceptron(10)
+# Inicializando perceptron
+x = int(input("Insira o valor de entrada: "))
+p = Perceptron(x)
 p.print_stats()
