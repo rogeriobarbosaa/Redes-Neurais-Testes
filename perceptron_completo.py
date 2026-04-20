@@ -13,6 +13,15 @@ class PerceptronCompleto:
         return line
     
     def print_stats(self):
-        print(f"Pesos (w) = {self.w_vet:.3f}")
+        pesos = [round(w, 3) for w in self.w_vet]
+
+        print(f"Pesos (w) = {pesos}")
         print(f"Bias (b) = {self.b:.3f}")
         print(f"Eq. Reta (y = w1*x1 + w2*x2 + ... + b) = {self.line:.3f}")
+
+# Inicializando perceptron
+x_vet = input("Insira os valores de entrada: ").split(", ")
+x_vet = [int(x) for x in x_vet]
+
+p = PerceptronCompleto(x_vet)
+p.print_stats()
