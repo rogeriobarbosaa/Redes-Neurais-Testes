@@ -21,7 +21,7 @@ class PerceptronCompleto:
 
 # Inicializando perceptron
 x_vet = input("Insira os valores de entrada: ").split(", ")
-x_vet = [int(x) for x in x_vet]
+x_vet = [float(x) for x in x_vet]
 
 p = PerceptronCompleto(x_vet)
 p.print_stats()
